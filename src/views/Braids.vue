@@ -4,9 +4,9 @@
     <mdb-card class="jumbotron" style="background-image: url(https://s1.r29static.com//bin/entry/e0a/x/1929123/image.png);background-size:cover;background-position:center center;width:100%;">
   <div class="text-white text-center py-5 px-4 my-5">
     <div>
-      <h2 class="card-title h1-responsive pt-3 mb-5 font-bold"><strong>Create your beautiful website with MDBootstrap</strong></h2>
-      <p class="mx-5 mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat fugiat, laboriosam, voluptatem,
-        optio vero odio nam sit officia accusamus minus error nisi architecto nulla ipsum dignissimos. Odit sed qui, dolorum!
+      <h2 class="card-title h1-responsive pt-3 mb-5 font-bold" style="text-align:left;"><strong>GET YOUR INSPIRATION!</strong></h2>
+      <p class="mx-5 mb-5" style="text-align:left;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>Repellat fugiat, laboriosam, voluptatem,
+        optio vero odio nam sit officia accusamus minus error nisi architecto nulla ipsum dignissimos.<br> Odit sed qui, dolorum!
       </p>
     </div>
   </div>
@@ -26,7 +26,7 @@
        >
        <mdb-card   class="card hair ">
        <mdb-tooltip :options="{placement: 'right'}">
-       <span slot="tip"><h1>{{entry.name}}</h1><br></span>
+       <span slot="tip"><p>{{entry.tip}}</p><br></span>
        <mdb-btn slot="reference" color="link">
          <mdb-card-image class="media-object" v-bind:src="entry.image"></mdb-card-image>
        </mdb-btn>
