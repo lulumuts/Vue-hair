@@ -8,7 +8,7 @@
     <mdb-card-body style="margin-top:60%;">
       <mdb-card-title tag="h5" style="color:white;"><strong>GET YOUR INSPIRATION!</strong></mdb-card-title>
       <mdb-card-text style="color:white;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id faucibus nisl tincidunt eget nullam. Porta nibh venenatis cras sed felis.</mdb-card-text>
-      <mdb-card-text small muted>Last updated 3 mins ago</mdb-card-text>
+      <mdb-card-text style="font-size:3vh;color:white;">LETS GET STARTED!</mdb-card-text>
     </mdb-card-body>
     </router-link>
   </mdb-card>
