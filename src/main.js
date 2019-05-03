@@ -2,8 +2,8 @@ import Vue from 'vue'
 import firebase from 'firebase'
 import App from './App.vue'
 import router from './router'
-import 'bootstrap-css-only/css/bootstrap.min.css';
-import 'mdbvue/build/css/mdb.css';
+import 'bootstrap-css-only/css/bootstrap.min.css'
+import 'mdbvue/build/css/mdb.css'
 import VTooltip from 'v-tooltip'
 import VueMaterial from 'vue-material'
 import 'vue-material/dist/vue-material.min.css'
