@@ -1,30 +1,28 @@
 <template>
   <div class="home">
 <div class="">
-
-
 <mdb-card-group>
 
   <mdb-card class="card-image-one">
   <router-link to="/braids">
-    <mdb-card-body>
-      <mdb-card-title tag="h5">Panel title</mdb-card-title>
-      <mdb-card-text>This is a wider panel with supporting text below as a natural lead-in to additional content. This
-        content is a little bit longer.</mdb-card-text>
-      <mdb-card-text small muted>Last updated 3 mins ago</mdb-card-text>
+    <mdb-card-body style="margin-top:60%;">
+      <mdb-card-title tag="h5" style="color:white;"><strong>GET YOUR INSPIRATION!</strong></mdb-card-title>
+      <mdb-card-text style="color:white;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id faucibus nisl tincidunt eget nullam. Porta nibh venenatis cras sed felis.</mdb-card-text>
+      <mdb-card-text style="font-size:3vh;color:white;">LETS GET STARTED!</mdb-card-text>
     </mdb-card-body>
     </router-link>
   </mdb-card>
 
-  <mdb-card>
-    <mdb-card-body class="card-image-two">
+  <mdb-card class="card-image-two">
+    <mdb-card-body  style="margin-top:60%;">
+
       <mdb-card-title tag="h5">Panel title</mdb-card-title>
-      <mdb-card-text>This panel has supporting text below as a natural lead-in to additional content.</mdb-card-text>
+      <mdb-card-text style="color:white;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id faucibus nisl tincidunt eget nullam. Porta nibh venenatis cras sed felis.</mdb-card-text>
       <mdb-card-text small muted>Last updated 3 mins ago</mdb-card-text>
     </mdb-card-body>
   </mdb-card>
-  <mdb-card>
-    <mdb-card-body class="card-image-three">
+  <mdb-card class="card-image-three">
+    <mdb-card-body style="margin-top:60%;">
       <mdb-card-title tag="h5">Panel title</mdb-card-title>
       <mdb-card-text>This is a wider panel with supporting text below as a natural lead-in to additional content. This
         panel has even longer content than the first to show that equal height action.</mdb-card-text>
@@ -87,7 +85,7 @@ export default {
   }
  .home {
  width:100%;
- 
+
  }
  .card-body{
   backgroundColor:transparent;
