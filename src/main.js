@@ -4,16 +4,17 @@ import App from './App.vue'
 import router from './router'
 import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'mdbvue/build/css/mdb.css';
+import VTooltip from 'v-tooltip'
 import VueMaterial from 'vue-material'
 import 'vue-material/dist/vue-material.min.css'
 import VueFormWizard from 'vue-form-wizard'
 import 'vue-form-wizard/dist/vue-form-wizard.min.css'
 
-
+Vue.use(VTooltip)
 Vue.use(VueMaterial)
 Vue.use(VueFormWizard)
 Vue.config.productionTip = false
-
+Vue.directive('my-tooltip', VTooltip)
 let app = ''
 
 firebase.initializeApp({

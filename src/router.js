@@ -5,6 +5,7 @@ import Home from '@/views/Home.vue'
 import Login from '@/views/Login.vue'
 import Signup from '@/views/Signup.vue'
 import Form from '@/views/Form.vue'
+import Braids from '@/views/Braids.vue'
 
 Vue.use(Router)
 
@@ -33,10 +34,19 @@ const router = new Router({
       name: 'Form',
       component: Form
     },
+
     {
       path: '/home',
       name: 'Home',
       component: Home,
+      meta: {
+        requiresAuth: true
+      }
+    },
+    {
+      path: '/braids',
+      name: 'Braids',
+      component: Braids,
       meta: {
         requiresAuth: true
       }

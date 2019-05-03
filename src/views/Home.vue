@@ -1,52 +1,39 @@
 <template>
   <div class="home">
-<div class="bg d-flex justify-content-center">
-<mdb-container fluid class="container">
+<div class="">
 
-<mdb-row>
-  <mdb-col md="4" >
-  <mdb-card class="line-card">
-    <mdb-card-image class="card-image" src="https://i.pinimg.com/564x/bb/78/ef/bb78efb90fd762e19f3042aea8df7ffa.jpg" alt="Card image cap"></mdb-card-image>
-    <h2 class="title">BRAIDS</h2>
-  </mdb-card>
-  </mdb-col>
 
-  <mdb-col md="4">
-    <mdb-card class="line-card">
-    <mdb-card-image class="card-image" src="https://i.pinimg.com/564x/05/b4/08/05b4081aa923579b29ebf62a61d2f785.jpg" alt="Card image cap"></mdb-card-image>
-    <h2 class="title">NATURAL</h2>
-  </mdb-card>
-  </mdb-col>
-  <mdb-col md="4">
-    <mdb-card class="card-three">
-    <mdb-card-image class="card-image" src="https://i.pinimg.com/564x/b7/76/a1/b776a112a82bf2a349a8dcb0a27d01f8.jpg" alt="Card image cap"></mdb-card-image>
-    <h2 class="title">LINES</h2>
-  </mdb-card>
-  </mdb-col>
-  <mdb-col md="4">
-    <mdb-card class="card">
-    <mdb-card-image class="card-image" src="https://i.pinimg.com/564x/bf/cb/d7/bfcbd72513ce650b746a7dae3bd8e3b5.jpg?b=t" alt="Card image cap"></mdb-card-image>
-    <h2 class="title">LOCS</h2>
-  </mdb-card>
-  </mdb-col>
+<mdb-card-group>
 
-  <mdb-col md="4">
-    <mdb-card class="line-card">
-    <mdb-card-image class="card-image" src="https://i.pinimg.com/564x/f1/f9/81/f1f981e2eb847dd353a5afdf0d8d6458.jpg" alt="Card image cap"></mdb-card-image>
-    <h2 class="title">LOW CUT</h2>
+  <mdb-card class="card-image-one">
+  <router-link to="/braids">
+    <mdb-card-body>
+      <mdb-card-title tag="h5">Panel title</mdb-card-title>
+      <mdb-card-text>This is a wider panel with supporting text below as a natural lead-in to additional content. This
+        content is a little bit longer.</mdb-card-text>
+      <mdb-card-text small muted>Last updated 3 mins ago</mdb-card-text>
+    </mdb-card-body>
+    </router-link>
   </mdb-card>
-  </mdb-col>
 
-  <mdb-col md="4">
-    <mdb-card class="line-card">
-    <mdb-card-image class="card-image image" src="https://i.pinimg.com/564x/45/02/c5/4502c558ec806f563613acfe8b4f013a.jpg" alt="Card image cap"></mdb-card-image>
-    <h2 class="title">THREADED</h2>
+  <mdb-card>
+    <mdb-card-body class="card-image-two">
+      <mdb-card-title tag="h5">Panel title</mdb-card-title>
+      <mdb-card-text>This panel has supporting text below as a natural lead-in to additional content.</mdb-card-text>
+      <mdb-card-text small muted>Last updated 3 mins ago</mdb-card-text>
+    </mdb-card-body>
   </mdb-card>
-  </mdb-col>
-
-</mdb-row>
+  <mdb-card>
+    <mdb-card-body class="card-image-three">
+      <mdb-card-title tag="h5">Panel title</mdb-card-title>
+      <mdb-card-text>This is a wider panel with supporting text below as a natural lead-in to additional content. This
+        panel has even longer content than the first to show that equal height action.</mdb-card-text>
+      <mdb-card-text small muted>Last updated 3 mins ago</mdb-card-text>
+    </mdb-card-body>
+  </mdb-card>
+</mdb-card-group>
     <button @click="logout">Logout</button>
-</mdb-container>
+
   </div>
   </DIV>
 </template>
@@ -54,14 +41,13 @@
 <script>
 import firebase from 'firebase'
 // @ is an alias to /src
-import { mdbContainer, mdbRow, mdbCol,mdbCard, mdbCardImage, mdbCardBody, mdbCardTitle, mdbCardText, mdbBtn} from 'mdbvue';
+import {  mdbRow, mdbCol, mdbCard, mdbCardImage,  mdbCardText, mdbBtn, mdbCardBody, mdbCardTitle, mdbCardGroup } from 'mdbvue';
 import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
   name: 'home',
   components: {
     HelloWorld,
-    mdbContainer,
     mdbRow,
     mdbCol,
     mdbCard,
@@ -69,7 +55,8 @@ export default {
     mdbCardBody,
     mdbCardTitle,
     mdbCardText,
-    mdbBtn
+    mdbBtn,
+    mdbCardGroup
   },
 
   methods: {
@@ -93,7 +80,6 @@ export default {
     position: 1000px 100px;
     /* Full height */
     height: 101vh;
-
     /* Center and scale the image nicely */
     background-position: center;
     background-repeat: no-repeat;
@@ -101,15 +87,20 @@ export default {
   }
  .home {
  width:100%;
+ 
  }
  .card-body{
   backgroundColor:transparent;
+ }
+ .center-image{
+  height:100vh;
  }
 
  .line-card{
  height:92%;
 
  }
+
  .card-three{
  height:92%;
  }
@@ -119,7 +110,18 @@ export default {
 
  }
  .card-image{
-
+ height:400px;
+ }
+ .card-image-one{
+      background-image: url("https://i.pinimg.com/564x/4b/b6/e1/4bb6e13fdeea90adf14a018d2525b91f.jpg");
+      background-size:contain;
+      position: 1000px 100px;
+       /* Full height */
+      height: 101vh;
+       /* Center and scale the image nicely */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
     /* filter: url(filters.svg#grayscale); Firefox 3.5+ */
       filter: gray; /* IE5+ */
       color:red;
@@ -127,14 +129,56 @@ export default {
       -webkit-transition: all .5s ease-in-out;
     }
 
-    .card-image:hover {
+    .card-image-one:hover {
     filter: none;
       -webkit-filter: grayscale(0);
-
     }
+    .card-image-two{
+         background-image: url("https://i.pinimg.com/564x/6d/54/ff/6d54ffaad6091cc909c964540bf302d4.jpg");
+         background-size:contain;
+         position: 2000px 100px;
+          /* Full height */
+         height: 101vh;
+          /* Center and scale the image nicely */
+         background-position: center;
+         background-repeat: no-repeat;
+         background-size: cover;
+       /* filter: url(filters.svg#grayscale); Firefox 3.5+ */
+         filter: gray; /* IE5+ */
+         color:red;
+         -webkit-filter: grayscale(2); /* Webkit Nightlies & Chrome Canary */
+         -webkit-transition: all .5s ease-in-out;
+       }
+
+       .card-image-two:hover {
+       filter: none;
+         -webkit-filter: grayscale(0);
+       }
+
+       .card-image-three{
+            background-image: url("https://i.pinimg.com/564x/93/c6/2e/93c62e48707de58f79c34cf3d92742c4.jpg");
+            background-size:contain;
+            position: 2000px 100px;
+             /* Full height */
+            height: 101vh;
+             /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+          /* filter: url(filters.svg#grayscale); Firefox 3.5+ */
+            filter: gray; /* IE5+ */
+            color:red;
+            -webkit-filter: grayscale(2); /* Webkit Nightlies & Chrome Canary */
+            -webkit-transition: all .5s ease-in-out;
+          }
+
+          .card-image-three:hover {
+          filter: none;
+            -webkit-filter: grayscale(0);
+          }
 
     .title{
-      margin-top:-15%;
+      margin-top:-20vh;
       z-index:1;
       color:white;
       text-align:left;
