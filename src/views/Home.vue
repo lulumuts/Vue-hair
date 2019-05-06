@@ -1,37 +1,54 @@
 <template>
   <div class="home">
 <div class="">
-<mdb-card-group>
+<mdb-navbar class="navbar" dark color="primary" position="top" transparent>
+  <mdb-navbar-brand href="#"></mdb-navbar-brand>
+
+    <mdb-navbar-nav>
+    <mdb-btn color="link" @click="logout" ><strong style="color:white;">Logout</strong></mdb-btn>
+
+      <mdb-nav-item class="nav-title" tag="h1" style="margin-top:13%;"><strong style="color:yellow;">OUR TOP HAIR STYLE PICKS OF THE WEEK</strong></mdb-nav-item>
+    </mdb-navbar-nav>
+    </mdb-navbar>
+<mdb-card-group style="z-index:-1;">
 
   <mdb-card class="card-image-one">
-  <router-link to="/braids">
-    <mdb-card-body style="margin-top:60%;">
-      <mdb-card-title tag="h5" style="color:white;"><strong>GET YOUR INSPIRATION!</strong></mdb-card-title>
-      <mdb-card-text style="color:white;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id faucibus nisl tincidunt eget nullam. Porta nibh venenatis cras sed felis.</mdb-card-text>
-      <mdb-card-text style="font-size:3vh;color:white;">LETS GET STARTED!</mdb-card-text>
+
+    <mdb-card-body style="margin-top:50vh;padding:3%;">
+      <mdb-card-title tag="h1" style="color:lightgrey;"><strong>CURLY FRO</strong></mdb-card-title>
+      <mdb-card-text style="color:lightgrey;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id faucibus nisl tincidunt eget nullam. Porta nibh venenatis cras sed felis.</mdb-card-text>
+      <router-link to="/braids"><mdb-card-text style="font-size:2vh;color:grey;">SEE MORE</mdb-card-text></router-link>
     </mdb-card-body>
-    </router-link>
+
   </mdb-card>
 
-  <mdb-card class="card-image-two">
-    <mdb-card-body  style="margin-top:60%;">
-
-      <mdb-card-title tag="h5">Panel title</mdb-card-title>
-      <mdb-card-text style="color:white;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id faucibus nisl tincidunt eget nullam. Porta nibh venenatis cras sed felis.</mdb-card-text>
-      <mdb-card-text small muted>Last updated 3 mins ago</mdb-card-text>
-    </mdb-card-body>
-  </mdb-card>
   <mdb-card class="card-image-three">
-    <mdb-card-body style="margin-top:60%;">
-      <mdb-card-title tag="h5">Panel title</mdb-card-title>
-      <mdb-card-text>This is a wider panel with supporting text below as a natural lead-in to additional content. This
+    <mdb-card-body style="margin-top:50vh;">
+      <mdb-card-title tag="h1" style="color:grey;"><strong>LINES</strong></mdb-card-title>
+      <mdb-card-text style="color:grey;">This is a wider panel with supporting text below as a natural lead-in to additional content. This
         panel has even longer content than the first to show that equal height action.</mdb-card-text>
-      <mdb-card-text small muted>Last updated 3 mins ago</mdb-card-text>
+<router-link to="/braids"><mdb-card-text style="font-size:2vh;color:grey;">SEE MORE</mdb-card-text></router-link>
+    </mdb-card-body>
+  </mdb-card>
+  <mdb-card class="card-image-two">
+    <mdb-card-body  style="margin-top:50vh;">
+      <mdb-card-title tag="h1" style="color:grey;"><strong>SHORT CUT</strong></mdb-card-title>
+      <mdb-card-text style="color:grey;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id faucibus nisl tincidunt eget nullam. Porta nibh venenatis cras sed felis.</mdb-card-text>
+      <router-link to="/braids"><mdb-card-text style="font-size:2vh;color:grey;">SEE MORE</mdb-card-text></router-link>
+    </mdb-card-body>
+  </mdb-card>
+
+
+  <mdb-card class="card-image-four">
+    <mdb-card-body style="margin-top:50vh;">
+      <mdb-card-title tag="h1" style="color:lightgrey;"><strong>BOX BRAIDS</strong></mdb-card-title>
+      <mdb-card-text style="color:lightgrey;">This is a wider panel with supporting text below as a natural lead-in to additional content. This
+        panel has even longer content than the first to show that equal height action.</mdb-card-text>
+        <router-link to="/braids"><mdb-card-text style="font-size:2vh;color:lightgrey;">SEE MORE</mdb-card-text></router-link>
+
     </mdb-card-body>
   </mdb-card>
 </mdb-card-group>
-    <button @click="logout">Logout</button>
-
   </div>
   </DIV>
 </template>
@@ -39,22 +56,21 @@
 <script>
 import firebase from 'firebase'
 // @ is an alias to /src
-import {  mdbRow, mdbCol, mdbCard, mdbCardImage,  mdbCardText, mdbBtn, mdbCardBody, mdbCardTitle, mdbCardGroup } from 'mdbvue';
-import HelloWorld from '@/components/HelloWorld.vue'
+
+import { mdbCard, mdbCardText, mdbCardBody, mdbCardTitle, mdbCardGroup, mdbNavbar, mdbNavItem, mdbBtn } from 'mdbvue'
 
 export default {
   name: 'home',
   components: {
-    HelloWorld,
-    mdbRow,
-    mdbCol,
     mdbCard,
-    mdbCardImage,
     mdbCardBody,
     mdbCardTitle,
     mdbCardText,
-    mdbBtn,
-    mdbCardGroup
+    mdbCardGroup,
+    mdbNavbar,
+    mdbNavItem,
+    mdbBtn
+
   },
 
   methods: {
@@ -67,7 +83,7 @@ export default {
 }
 </script>
 <style scoped>
-
+@import url('https://fonts.googleapis.com/css?family=Anton');
   body, html {
     height: 100%;
   }
@@ -85,6 +101,11 @@ export default {
   }
  .home {
  width:100%;
+
+ }
+ .nav-title{
+ font-family: 'Anton', sans-serif;
+ font-size:7vh;
 
  }
  .card-body{
@@ -107,17 +128,18 @@ export default {
   padding: 2%;
 
  }
+ .navbar { box-shadow: none !important; } .btn { box-shadow: none !important; }
  .card-image{
  height:400px;
  }
  .card-image-one{
-      background-image: url("https://i.pinimg.com/564x/4b/b6/e1/4bb6e13fdeea90adf14a018d2525b91f.jpg");
+      background-image: url("https://i.pinimg.com/564x/84/9d/cf/849dcf4e0abd06cedaa4d6647d22b8fc.jpg");
       background-size:contain;
       position: 1000px 100px;
        /* Full height */
       height: 101vh;
        /* Center and scale the image nicely */
-      background-position: center;
+      background-position: center center;
       background-repeat: no-repeat;
       background-size: cover;
     /* filter: url(filters.svg#grayscale); Firefox 3.5+ */
@@ -132,7 +154,7 @@ export default {
       -webkit-filter: grayscale(0);
     }
     .card-image-two{
-         background-image: url("https://i.pinimg.com/564x/6d/54/ff/6d54ffaad6091cc909c964540bf302d4.jpg");
+         background-image: url("https://i.pinimg.com/564x/bb/04/eb/bb04eb3261fb5d7b4b093b6955807843.jpg");
          background-size:contain;
          position: 2000px 100px;
           /* Full height */
@@ -154,13 +176,13 @@ export default {
        }
 
        .card-image-three{
-            background-image: url("https://i.pinimg.com/564x/93/c6/2e/93c62e48707de58f79c34cf3d92742c4.jpg");
+            background-image: url("https://i.pinimg.com/564x/2b/3d/17/2b3d17925f6f7058d8f8013000252897.jpg");
             background-size:contain;
-            position: 2000px 100px;
+            position: 3000px 100px;
              /* Full height */
             height: 101vh;
              /* Center and scale the image nicely */
-            background-position: center;
+            background-position: top center;
             background-repeat: no-repeat;
             background-size: cover;
           /* filter: url(filters.svg#grayscale); Firefox 3.5+ */
@@ -174,7 +196,27 @@ export default {
           filter: none;
             -webkit-filter: grayscale(0);
           }
+          .card-image-four{
+               background-image: url("https://i.pinimg.com/564x/b2/36/cb/b236cb961fbaf9c34c9e52e0111461ae.jpg");
+               background-size:contain;
+               position: 2000px 100px;
+                /* Full height */
+               height: 101vh;
+                /* Center and scale the image nicely */
+               background-position: center;
+               background-repeat: no-repeat;
+               background-size: cover;
+             /* filter: url(filters.svg#grayscale); Firefox 3.5+ */
+               filter: gray; /* IE5+ */
+               color:red;
+               -webkit-filter: grayscale(2); /* Webkit Nightlies & Chrome Canary */
+               -webkit-transition: all .5s ease-in-out;
+             }
 
+             .card-image-four:hover {
+             filter: none;
+               -webkit-filter: grayscale(0);
+             }
     .title{
       margin-top:-20vh;
       z-index:1;
