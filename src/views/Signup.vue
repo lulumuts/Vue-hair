@@ -11,13 +11,13 @@
                   <mdb-input type="password" v-model="password" placeholder="Password" />
               </tab-content>
               <tab-content>
-              <mdb-input type="text" placeholder="Hair Type" />
-              <mdb-input type="text" placeholder="Hair Products" />
+              <mdb-input type="text" placeholder="What's your Hair type?" />
+              <mdb-input type="text" placeholder="How often do you do your hair?" />
 
                </tab-content>
                <tab-content>
-               <mdb-input type="text" placeholder="Hair Type" />
-               <mdb-input type="text" placeholder="Hair Products" />
+               <mdb-input type="text" placeholder="How often do you change your hairstyle?" />
+               <mdb-input type="text" placeholder="Would you benefit from hair product advice?" />
                </tab-content>
                  <span>or go back to <router-link to="/login">login</router-link>.</span>
             </form-wizard>
@@ -169,7 +169,7 @@ export default {
   .form{
 
   margin-top:18vh;
-  opacity:0.9;
+  opacity:1;
   backgroundColor: grey;
   }
   button {
